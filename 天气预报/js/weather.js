@@ -5,7 +5,7 @@ $.getJSON('https://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Ma
 	var city = data.Isp.slice(data.Isp.indexOf('省') + 1, data.Isp.indexOf('市') + 1);
 	// 发送get 请求， 获取天气情况
 	$.getJSON('http://api.map.baidu.com/telematics/v3/weather?callback=?', {
-		location: city,
+		location: '福州',
 		output: 'json',
 		ak: 'iw5m2G7ayDow8ofDdDGVUMB3',
 		mcode: 'com.BaiduWeather'
