@@ -1,8 +1,8 @@
 
 // 发送get 请求，获取 当前位置IP
-$.getJSON('https://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random(), function(data) {
+//$.getJSON('https://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random(), function(data) {
 	// 获取当前城市
-	var city = data.Isp.slice(data.Isp.indexOf('省') + 1, data.Isp.indexOf('市') + 1);
+	//var city = data.Isp.slice(data.Isp.indexOf('省') + 1, data.Isp.indexOf('市') + 1);
 	// 发送get 请求， 获取天气情况
 	$.getJSON('http://api.map.baidu.com/telematics/v3/weather?callback=?', {
 		location: '福州',
@@ -42,7 +42,7 @@ $.getJSON('https://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Ma
 			$('.wind', section).text(weather.wind);
 		}
 	})
-});
+//});
 // 根据 pm25 得到空气状况： 优、良、差、严重
 function getpm25String(pm25) {
 	if(pm25 <= 50) {
