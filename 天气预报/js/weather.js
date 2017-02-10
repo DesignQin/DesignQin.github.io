@@ -1,6 +1,6 @@
 
 // 发送get 请求，获取 当前位置IP
-$.getJSON('http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random(), function(data) {
+$.getJSON('https://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random(), function(data) {
 	// 获取当前城市
 	var city = data.Isp.slice(data.Isp.indexOf('省') + 1, data.Isp.indexOf('市') + 1);
 	// 发送get 请求， 获取天气情况
